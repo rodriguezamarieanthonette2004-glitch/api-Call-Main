@@ -17,3 +17,12 @@ export async function createStudent(data) {
 	});
 	return res.json();
 }
+
+// Expose helpers for browser console testing
+if (typeof window !== 'undefined') {
+	window.api = {
+		apiUrl,
+		fetchStudents,
+		createStudent,
+	};
+}
