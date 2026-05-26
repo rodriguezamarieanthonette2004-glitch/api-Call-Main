@@ -26,7 +26,7 @@ class StudentApiTest extends TestCase
 
     public function test_can_get_students()
     {
-        Student::factory()->create(["email" => "gettest@example.com", "name" => "GetTest", "course" => "BSIT"]);
+        Student::create(["email" => "gettest@example.com", "name" => "GetTest", "course" => "BSIT"]);
 
         $response = $this->getJson('/api/students');
 
