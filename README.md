@@ -21,6 +21,50 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
+## Local setup
+
+To start the API server locally:
+
+```bash
+php artisan serve
+```
+
+Or use the package script:
+
+```bash
+npm run serve
+```
+
+Then access the API at:
+
+```text
+http://127.0.0.1:8000/api/students
+```
+
+If you're running a frontend that uses Vite, set the API base URL with `VITE_API_URL` in your `.env` (or `.env.example`) file:
+
+```
+VITE_API_URL=http://127.0.0.1:8000
+```
+
+The `resources/js/app.js` file includes helpers `apiUrl()`, `fetchStudents()`, and `createStudent()` that use this env var.
+
+### SQLite (local)
+
+This project uses SQLite by default for local development. To inspect the database:
+
+```bash
+# open the sqlite file with the sqlite3 CLI
+sqlite3 database/database.sqlite
+```
+
+If you need to reset the local DB:
+
+```bash
+rm database/database.sqlite
+php artisan migrate
+```
+
 ## Learning Laravel
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.

@@ -1,0 +1,44 @@
+{
+  "info": {
+    "name": "api-call-main",
+    "_postman_id": "00000000-0000-0000-0000-000000000000",
+    "description": "Basic collection for students API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get all students",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/students",
+          "protocol": "http",
+          "host": ["127","0","0","1"],
+          "port": "8000",
+          "path": ["api","students"]
+        }
+      }
+    },
+    {
+      "name": "Create student",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Jane Doe\",\n  \"email\": \"jane@example.com\",\n  \"course\": \"BSIT\"\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/students",
+          "protocol": "http",
+          "host": ["127","0","0","1"],
+          "port": "8000",
+          "path": ["api","students"]
+        }
+      }
+    }
+  ]
+}
